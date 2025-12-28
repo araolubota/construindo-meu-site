@@ -1,35 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projectos | Arão Lubota</title>
+    <meta name="description" content="Portfolio de projetos de Arão Lubota.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav> 
-        <ul>
-            <li>
-                <a href="index.html">Sobre mi</a>
-            </li>
-            <li>
-                <a href="projectos.html">Projectos</a>
-            </li>
-            <li>
-                <a href="contacto.html">Contacto</a>
-            </li>
-        </ul>
-    
-    </nav>
-    <header>
-       <h1>Pagina de Projectos</h1>
-        <h2>Brevemente</h2>
-    </header>
-    <main>
-       <p>Estou a desenvolver esta pagina , onde irei postar os meus projectos e colaborações</p>
-    </main>
-    <footer>
 
-    </footer>
+<body>
+    <div class="container">
+        <nav aria-label="Menu principal">
+            <ul role="menu">
+                <li role="menuitem">
+                    <a href="index.html">Sobre mim</a>
+                </li>
+                <li role="menuitem">
+                    <a href="projectos.html" class="active" aria-current="page">Projectos</a>
+                </li>
+                <li role="menuitem">
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header class="site-header">
+            <h1 class="main-title">Meus Projectos</h1>
+            <h2 class="subtitle">Trabalhos e Colaborações</h2>
+        </header>
+
+        <main>
+            <div class="grid-layout">
+                <!-- Exemplo de Card de Projeto 1 -->
+                <article class="card">
+                    <h3>Projecto 1</h3>
+                    <p>Descrição breve do projeto. Uma solução inovadora construída com tecnologias modernas.</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600;">Ver mais &rarr;</a>
+                </article>
+
+                <!-- Exemplo de Card de Projeto 2 -->
+                <article class="card">
+                    <h3>Projecto 2</h3>
+                    <p>Um sistema completo de gestão desenvolvido para otimizar processos empresariais.</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600;">Ver mais &rarr;</a>
+                </article>
+
+                <!-- Exemplo de Card de Projeto 3 -->
+                <article class="card">
+                    <h3>Projecto 3</h3>
+                    <p>Aplicativo móvel focado em experiência do usuário e alta performance.</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600;">Ver mais &rarr;</a>
+                </article>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <p>Mais projetos em breve...</p>
+            </div>
+        </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="https://github.com/araolubota" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/icons8-github.svg" alt="GitHub">
+                        Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/AraoLubota" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/icons8-twitterx.svg" alt="Twitter">
+                        X Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/araolubota/" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/icons8-instagram.svg" alt="Instagram">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://web.facebook.com/berryonprince" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/icons8-facebook-novo-30.png" alt="Facebook">
+                        Facebook
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 </body>
+
 </html>

@@ -1,35 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Arão Lubota</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav> 
-        <ul>
-            <li>
-                <a href="index.html">Sobre mi</a>
-            </li>
-            <li>
-                <a href="projectos.html">Projectos</a>
-            </li>
-            <li>
-                <a href="contacto.html">Contacto</a>
-            </li>
-        </ul>
-        
-    </nav>
-    <header>
-        <h1>Pagina de contacto</h1>
-        <h2>Brevemente</h2>
-    </header>
-    <main>
-        <p>Estou a construir essa pagina , onde terá todos os meus contactos</p>
-    </main>
-    <footer>
+    <meta name="description" content="Entre em contacto com Arão Lubota.">
 
-    </footer>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para formulário de contacto */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        input,
+        textarea {
+            background: var(--bg-body);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-family: inherit;
+            width: 100%;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px var(--primary-glow);
+        }
+
+        button[type="submit"] {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            align-self: flex-start;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--primary-glow);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav aria-label="Menu principal">
+            <ul role="menu">
+                <li role="menuitem">
+                    <a href="index.html">Sobre mim</a>
+                </li>
+                <li role="menuitem">
+                    <a href="projectos.html">Projectos</a>
+                </li>
+                <li role="menuitem">
+                    <a href="contacto.html" class="active" aria-current="page">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header class="site-header">
+            <h1 class="main-title">Contacto</h1>
+            <h2 class="subtitle">Vamos trabalhar juntos?</h2>
+        </header>
+
+        <main>
+            <div class="grid-layout" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+                <section class="card">
+                    <h3>Envie uma mensagem</h3>
+                    <form class="contact-form" action="#" method="POST"
+                        onsubmit="event.preventDefault(); alert('Formulário de demonstração.');">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Como posso ajudar?"
+                                required></textarea>
+                        </div>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </section>
+
+                <section style="text-align: center; margin-top: 2rem;">
+                    <h3>Ou encontre-me nas redes</h3>
+                    <p>Sinta-se à vontade para me contatar através das redes sociais abaixo.</p>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="https://github.com/araolubota" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/icons8-github.svg" alt="GitHub">
+                        Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/AraoLubota" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/icons8-twitterx.svg" alt="Twitter">
+                        X Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/araolubota/" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/icons8-instagram.svg" alt="Instagram">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://web.facebook.com/berryonprince" target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/icons8-facebook-novo-30.png" alt="Facebook">
+                        Facebook
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 </body>
+
 </html>
